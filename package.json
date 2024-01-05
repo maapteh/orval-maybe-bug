@@ -1,0 +1,36 @@
+{
+  "name": "@mpth/api-foo",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "",
+  "main": "src/index.ts",
+  "typings": "src/index.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "esm"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "rootDir": "src"
+  },
+  "scripts": {
+    "generate": "orval",
+    "clean": "rm -rf node_modules && rm -rf esm && rm -rf tsconfig.tsbuildinfo",
+    "compile": "tsc --build",
+    "compile:watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.17.1",
+    "axios": "1.6.4"
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "5.17.1",
+    "@tanstack/react-query-devtools": "5.17.1",
+    "orval": "6.23.0",
+    "prettier": "3.1.1",
+    "typescript": "5.3.3"
+  }
+}
